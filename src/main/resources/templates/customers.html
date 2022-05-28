@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+
+<header th:insert="fragments.html :: nav"></header>
+    <meta charset="ISO-8859-1">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="text-center">
+        <h1 class="text-center"> List Customers </h1>
+
+        <a th:href="@{/customers/new}"
+           class="btn btn-primary btn-sm mb-3 center"> Add customers</a>
+    </div>
+
+    <table class="table table-striped table-bordered">
+
+        <thead class="table-dark">
+        <tr>
+            <th> Customer ID </th>
+            <th> Customer Firstname </th>
+            <th> Customer Lastname </th>
+            <th> Customer Address </th>
+            <th> Customer City </th>
+            <th> Customer Phone Number </th>
+            <th> Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr th:each="customer: ${customers}">
+            <td th:text="${customer.customer_id}"></td>
+            <td th:text="${customer.firstname}"></td>
+            <td th:text="${customer.lastname}"></td>
+            <td th:text="${customer.address}"></td>
+            <td th:text="${customer.city}"></td>
+            <td th:text="${customer.phoneno}"></td>
+
+            <td>
+                <a th:href="@{/customers/edit/{id}(id=${customer.customer_id})}"
+                   class="btn btn-primary">Update</a>
+
+                <a th:href="@{/customers/{id}(id=${customer.customer_id})}"
+                   class="btn btn-danger">Delete</a>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>

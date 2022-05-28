@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+
+<body>
+<header th:insert="fragments.html :: nav"></header>
+<br>
+<br>
+<div align="center">
+    <div class="row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> FeedBack Form </h1>
+                <div class = "card-body">
+
+                    <form th:action="@{/feedBackForm}"
+                          th:object = "${feedBack}"
+                          method="POST">
+
+                        <div class ="form-group">
+
+                            <label> Author's name </label>
+                            <input
+                                    type = "text"
+                                    name = "customerName"
+                                    th:field = "*{customerName}"
+                                    class = "form-control"
+                                    placeholder="Enter your name"/>
+                        </div>
+
+                        <div class ="form-group">
+
+                            <label> Email: </label>
+                            <input
+                                    type = "email"
+                                    name = "email"
+                                    th:field = "*{email}"
+                                    class = "form-control"
+                                    placeholder="Enter your email"/>
+                        </div>
+
+
+                        <label>Content of Feedback:</label><br>
+
+                        <textarea rows="40" cols="70" th:field="*{description}"></textarea>
+
+                        <br/>
+
+                    </form>
+                </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

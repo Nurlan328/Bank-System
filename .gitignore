@@ -1,0 +1,4 @@
+# Project exclude paths
+/src/main/java/kz/iitu/itse1910/nurlan/oibekuly/scheduling/
+/src/main/java/kz/iitu/itse1910/nurlan/oibekuly/spring_batch/
+/target/
