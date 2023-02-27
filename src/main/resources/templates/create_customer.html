@@ -9,98 +9,98 @@
 
 <body>
 <header th:insert="fragments.html :: nav"></header>
-    <br>
+<br>
 
-    <div class="container">
-        <div class="row">
-            <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                <h1 class = "text-center"> Create New Customer </h1>
-                     <div class = "card-body">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center"> Create New Customer </h1>
+            <div class="card-body">
 
-                         <form th:action="@{/customers}"
-                               th:object = "${customer}"
-                               method="POST">
-                             <br>
-                             <div class ="form-group">
-                                 <label> Customer's id </label>
-                                 <input
-                                         type = "number"
-                                         name = "customer_id"
-                                         th:field = "*{customer_id}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's Firstname"/>
-                             </div>
+                <form th:action="@{/customers}"
+                      th:object="${customer}"
+                      method="POST">
+                    <br>
+                    <div class="form-group">
+                        <label> Customer's id </label>
+                        <input
+                                type="number"
+                                name="customer_id"
+                                th:field="*{customer_id}"
+                                class="form-control"
+                                placeholder="Enter Customer's Firstname"/>
+                    </div>
 
 
-                             <div class ="form-group">
-                                 <label> Customer's Firstname </label>
-                                 <input
-                                         type = "text"
-                                         name = "firstname"
-                                         th:field = "*{firstname}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's Firstname"/>
-                             </div>
+                    <div class="form-group">
+                        <label> Customer's Firstname </label>
+                        <input
+                                type="text"
+                                name="firstname"
+                                th:field="*{firstname}"
+                                class="form-control"
+                                placeholder="Enter Customer's Firstname"/>
+                    </div>
 
-                            <br>
-                             <div class ="form-group">
-                                 <label> Customer's Lastname </label>
-                                 <input
-                                         type = "text"
-                                         name = "lastname"
-                                         th:field = "*{lastname}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's Lastname"/>
-                             </div>
+                    <br>
+                    <div class="form-group">
+                        <label> Customer's Lastname </label>
+                        <input
+                                type="text"
+                                name="lastname"
+                                th:field="*{lastname}"
+                                class="form-control"
+                                placeholder="Enter Customer's Lastname"/>
+                    </div>
 
-                             <br>
-                             <br>
+                    <br>
+                    <br>
 
-                             <div class ="form-group">
-                                 <label> Address of Customer </label>
-                                 <input
-                                         type = "text"
-                                         name = "address"
-                                         th:field = "*{address}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's address"/>
-                             </div>
+                    <div class="form-group">
+                        <label> Address of Customer </label>
+                        <input
+                                type="text"
+                                name="address"
+                                th:field="*{address}"
+                                class="form-control"
+                                placeholder="Enter Customer's address"/>
+                    </div>
 
-                             <br>
+                    <br>
 
-                             <div class ="form-group">
-                                 <label> City of Customer </label>
-                                 <input
-                                         type = "text"
-                                         name = "city"
-                                         th:field = "*{city}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's city"/>
-                             </div>
+                    <div class="form-group">
+                        <label> City of Customer </label>
+                        <input
+                                type="text"
+                                name="city"
+                                th:field="*{city}"
+                                class="form-control"
+                                placeholder="Enter Customer's city"/>
+                    </div>
 
-                             <br>
-                             <div class ="form-group">
-                                 <label> Customer's phone number </label>
-                                 <input
-                                         type = "text"
-                                         name = "phoneno"
-                                         th:field = "*{phoneno}"
-                                         class = "form-control"
-                                         placeholder="Enter Customer's phoneNo"/>
-                             </div>
+                    <br>
+                    <div class="form-group">
+                        <label> Customer's phone number </label>
+                        <input
+                                type="text"
+                                name="phoneno"
+                                th:field="*{phoneno}"
+                                class="form-control"
+                                placeholder="Enter Customer's phoneNo"/>
+                    </div>
 
-                             <br>
+                    <br>
 
-                             <div class = "box-footer">
-                                 <button type="submit" class = "btn btn-primary">
-                                     Submit
-                                 </button>
-                             </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
 
-                         </form>
-                     </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

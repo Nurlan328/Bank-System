@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Nurlan_Oibekuly_ITSE_1910" />
+        <module name="Bank-System" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Nurlan_Oibekuly_ITSE_1910" target="1.8" />
+      <module name="Bank-System" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Nurlan_Oibekuly_ITSE_1910" options="-parameters" />
+      <module name="Bank-System" options="-parameters" />
     </option>
   </component>
 </project>
