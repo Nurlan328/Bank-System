@@ -1,12 +1,12 @@
-/*
-package kz.iitu.nurlan.oibekuly.config;
+package kz.iitu.nurlan.config;
 
+import kz.iitu.itse1910.nurlan.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MyFrontController extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {WebConfig.class};
+        return new Class[]{WebConfig.class};
     }
 
     @Override
@@ -16,17 +16,6 @@ public class MyFrontController extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/"};
+        return new String[]{"/"};
     }
-
-//    @Override
-//    public void onStartup(ServletContext servletContext) throws ServletException {
-//        // Dispatcher servlet
-//        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(WebConfig.class));
-//        dispatcher.setLoadOnStartup(1);
-//        dispatcher.setAsyncSupported(true);
-//// add this
-//        dispatcher.addMapping("/"); // or whatever you want/need
-//    }
 }
-*/
